@@ -4,8 +4,10 @@
 
 **Art / Music / CoffeeShop / Technology Blog**
 
-  connect to Soundcloud / tumblr /
-  / youtube playlists / BandsinTown / Deviant Art / BuiltinLA
-  include youtube short videos /
-  recepies from around the world
-  Self Help Blog (like elephant journal)
+  I would like to make a bloggish like app that has
+  the ability to connect to Soundcloud, Tumblr,
+  youtube,  BandsinTown, Deviant Art, BuiltinLA, yelp
+  and incorporate recepies from around the world.
+
+
+[trello](https://trello.com/b/X6sjAe5G/ruby-rails-project)
