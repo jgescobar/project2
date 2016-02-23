@@ -4,7 +4,7 @@
 
 **Art / Photography Blog** 
     
-My app through the lens will allow users to upload anytime of art they find inspiring. Whether it be photography or just cute cartoons, the users will be able to add links of the images they like.    
+My app through the lens will allow users to upload anytype of art they find inspiring. Whether it be photography or just cute cartoons, the users will be able to add links of the images they like.    
 
 **AAU:**
 

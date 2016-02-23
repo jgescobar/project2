@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  get '/home' => "pages#home"
+
+  get '/about' => "pages#about"
+
+  root 'sessions#new'
   resources :users
   resources :users, only: [:new, :create, :show]
 
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
-  root 'users#show'
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

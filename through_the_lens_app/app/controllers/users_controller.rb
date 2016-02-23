@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "You have successfully signed up!"
-      redirect_to root_path
+      redirect_to home_path
     else
       render 'new'
   end
