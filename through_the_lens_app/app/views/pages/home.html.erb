@@ -1,2 +1,9 @@
-<h1>HOME PAGE</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+
+<h1>What would you like to do?<small>Check out some ...</small></h1>
+
+<%= link_to "Art",         shares_path(category: "Art"), class: "btn btn-primary" %><br>
+<%= link_to "Music",       shares_path(category: "Music"), class: "btn btn-success" %><br>
+<%= link_to "Coffeeshops", shares_path(category: "Coffeeshops"), class: "btn btn-info" %><br>
+<%= link_to "Tech",        shares_path(category: "Tech"), class: "btn btn-warning" %>
+
