@@ -1,3 +1,13 @@
-<h1>
-Show user
-</h1>
+<h4>What your profile looks like</h4>
+
+<div class="form-container">
+  <%= bootstrap_form_for @user do |f| %>
+      <%= f.text_field :email %>
+      <%= f.password_field :password %>
+      <%= f.password_field :password_confirmation %>
+      <br>
+      <%= f.text_field :location %>
+      <%= f.text_field :img %>
+      <%= f.submit "Submit" %>
+  <% end %>
+</div>
