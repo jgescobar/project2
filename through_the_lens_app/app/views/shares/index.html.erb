@@ -3,7 +3,7 @@
 <% @shares.each do |share| %>
   <h3><%= share.title %></h3>
   <h3><%= share.artist %></h3>
-  <h3><%= share.link %></h3>
+  <img src= <%= share.link %> alt="a pretty thing belongs here">
   <h2><%= share.description %></h2>
   <h2><%= share.length %></h2>
   <h2><%= share.album %></h2>

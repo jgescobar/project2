@@ -3,7 +3,7 @@ User.destroy_all
 
 Share.create(
   category:    "Art",
-  link:        "https://art.alphacoders.com/arts/view/7091",
+  link:        "https://artfiles.alphacoders.com/709/7091.jpg",
   title:       "Lavendar Field",
   description: "a photography of Lavendar",
   artist:      "unknown",
