@@ -6,9 +6,7 @@ Share.create(
   title:       "Lavendar Field",
   description: "a photography of Lavendar",
   artist:      "unknown",
-  # length:      "",
-  # album:       "",
-  # address:     ""
+  user:         ""
 )
 
 Share.create(
@@ -19,11 +17,22 @@ Share.create(
   artist:      "Radiohead",
   length:      "4:50",
   album:       "In Rainbows",
-  # address:     ""
+  user:         ""
+
 )
 
 Share.create(
   category:    "Coffeeshops",
+  link:        "http://www.bricksandscones.com/",
+  title:       "Bricks and Scones",
+  description: "Harry Potter",
+  address:     "Larchmont"
+  user:         ""
+
+)
+
+Share.create(
+  category:    "Tech",
   link:        "http://www.bricksandscones.com/",
   title:       "bricksandscones",
   description: "harrypotter",
@@ -32,3 +41,6 @@ Share.create(
   # album:       "In Rainbows",
   address:     "Larchmont"
 )
+User.create(
+
+  )
