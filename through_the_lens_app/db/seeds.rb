@@ -1,4 +1,5 @@
-Share.delete_all
+Share.destroy_all
+User.destroy_all
 
 Share.create(
   category:    "Art",
@@ -6,7 +7,7 @@ Share.create(
   title:       "Lavendar Field",
   description: "a photography of Lavendar",
   artist:      "unknown",
-  user:         ""
+  user_id:     4
 )
 
 Share.create(
@@ -17,8 +18,7 @@ Share.create(
   artist:      "Radiohead",
   length:      "4:50",
   album:       "In Rainbows",
-  user:         ""
-
+  user_id:     4
 )
 
 Share.create(
@@ -26,21 +26,22 @@ Share.create(
   link:        "http://www.bricksandscones.com/",
   title:       "Bricks and Scones",
   description: "Harry Potter",
-  address:     "Larchmont"
-  user:         ""
-
+  address:     "Larchmont",
+  user_id:     4
 )
 
 Share.create(
   category:    "Tech",
-  link:        "http://www.bricksandscones.com/",
-  title:       "bricksandscones",
-  description: "harrypotter",
-  # artist:      "Radiohead",
-  # length:      "4:50",
-  # album:       "In Rainbows",
-  address:     "Larchmont"
+  link:        "http://www.digitaltrends.com/cool-tech/3d-printed-robotic-lawn-mower/",
+  title:       "Ardumower",
+  description: "This gadget mows the lawn for you.",
+  user_id:     4
 )
-User.create(
 
+User.create(
+  username:   "onbeing",
+  email:      "jas@example.com",
+  password:   "abc123",
+  img:        "../app/assets/images/default-profile-image.png",
+  location:   "Los Angeles"
   )

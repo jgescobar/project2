@@ -1,1 +1,31 @@
-Hey
+    <div class="Lens post-new">
+      <%= form_for [@user, User.new] do |f| %>
+        <div class="field form-group">
+          <%= f.label :username %>
+          <%= f.text_area :username, class: "form-control" %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :img %>
+          <%= f.text_field :img, class: "form-control" %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :location %>
+          <%= f.text_field :location, class: "form-control" %>
+        </div>
+
+        <%= hidden_field_tag "redirect", user_path(@user) %>
+
+        <div class="actions"><%= f.submit "Share", class: "btn btn-primary" %></div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-xs-6 col-md-8">
+    <h3>Recent Posts</h3>
+    <% @user.mumbles.take(10).each do |Lens| %>
+      <div class="col-md-6">
+          <%= render 'mumbles/mumble', user: mumble %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,5 +1,14 @@
 <h1><%= params[:category] %></h1>
 
 <% @shares.each do |share| %>
-  <h2><%= share.title %></h2>
+  <h3><%= share.title %></h3>
+  <h3><%= share.artist %></h3>
+  <h3><%= share.link %></h3>
+  <h2><%= share.description %></h2>
+  <h2><%= share.length %></h2>
+  <h2><%= share.album %></h2>
+  <h2><%= share.address %></h2>
+  <h2><%= share.user_id %></h2>
 <% end %>
+
+

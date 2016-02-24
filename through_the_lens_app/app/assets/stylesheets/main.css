@@ -7,5 +7,6 @@
 #rootpage {
   height: 700px;
   width: 700px;
-
+  text-align: center;
+  /*background-image: url("http://static.flickr.com/8068/8267361454_42586793fb.jpg") no-repeat;*/
 }
