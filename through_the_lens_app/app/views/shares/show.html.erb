@@ -1,0 +1,57 @@
+
+<div class="row text-center">
+  <% if flash[:notice] %>
+    <h4 class="warning-notice"><%= flash[:notice] %></h4>
+  <% end %>
+
+  <div class="col-xs-6 col-md-4">
+    <h3>Create New Content</h3>
+
+    <% if @share && @share.errors %>
+      <p>Your Content failed:</p>
+      <ul class="error-messages">
+        <% @share.errors.full_messages.each do |e| %>
+          <li class="warning-notice"><%= e %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <div class="mumble mumble-new">
+      <%= form_for [@share, Share.new] do |f| %>
+        <div class="field form-group">
+          <%= f.label :link %>
+          <%= f.text_area :link, class: "form-control" %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :title %>
+          <%= f.text_area :title, class: "form-control" %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :description %>
+          <%= f.text_area :description, class: "form-control" %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :length %>
+          <%= f.text_field :length, class: "form-control" %>
+        </div>
+        <div class="field form-group">
+          <%= f.label :artist %>
+          <%= f.text_field :artist, class: "form-control" %>
+        </div>
+
+        <%= hidden_field_tag "redirect", user_path(@user) %>
+
+        <div class="actions"><%= f.submit "Share", class: "btn btn-primary" %></div>
+      <% end %>
+    </div> <!-- mumble mumble-new -->
+  </div>
+
+  <div class="col-xs-6 col-md-8">
+    <h3>Recent Content</h3>
+    <% @user.shares.take(10).each do |share| %>
+      <div class="col-md-6">
+<%= link_to "Back to Categories", home_path %>
+      </div>
+    <% end %>
+  </div>
+</div>

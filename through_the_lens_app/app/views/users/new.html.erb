@@ -1,8 +1,9 @@
 
 <div class="col-sm-6 col-sm-offset-1">
-<h1>To Join the Gang, Simply Fill out your ...</h1>
-<%= bootstrap_form_for @user do |f| %>
-  <% if @user.errors.any? %>
+  <div class="jumbotron">
+    <h1>To Join the Gang, Simply Fill out your ...</h1>
+    <%= bootstrap_form_for @user do |f| %>
+      <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
       <ul>
@@ -30,6 +31,7 @@
     <div class="actions"><%= f.submit %></div>
   <% end %>
   </div>
+</div>
 
 
 

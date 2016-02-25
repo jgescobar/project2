@@ -14,20 +14,21 @@
 <nav class="navbar navbar-inverse">
   <div class="container">
     <div class="container-fluid">
-
       <div class="navbar-header">
         <%= link_to home_path, class: "navbar-brand" do %>
-          HOME
+          Home
         <% end %>
-
-        <button type="button" class="navbar-toggle collapsed navbar-right" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
+      <div class="navbar-header">
+        <%= link_to about_path, class: "navbar-brand" do %>
+          About
+        <% end %>
+<button type="button" class="navbar-toggle collapsed navbar-right" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button>
+</button>
       </div>
-
         <% if current_user %>
           <%= link_to "Art", shares_path(category: "Art"), class: "btn btn-default navbar-btn", class: "btn btn-danger", type: "button" %>
           <%= link_to "Music", shares_path(category: "Music"), class: "btn btn-default navbar-btn", class: "btn btn-success" %>
@@ -37,6 +38,7 @@
           <%= link_to 'Log Out', session_path(' '), class: "btn btn-default navbar-btn", class: "btn btn-warning", type: "button", method: :delete %>
         <% else %>
           <%= link_to "Sign In", new_session_path, class: "btn btn-default navbar-btn", class: "btn btn-success", type: "button" %>
+
           <%= link_to "Join the Gang", new_user_path, class: "btn btn-default navbar-btn", class: "btn btn-warning", type: "button" %>
         <% end %>
       </div>

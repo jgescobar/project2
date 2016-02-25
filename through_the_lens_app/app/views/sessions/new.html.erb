@@ -1,9 +1,11 @@
 <div class="col-sm-6 col-sm-offset-1">
-  <h1>Through The Lens</h1>
+<div id="wholepage">
+  <h1 class="text-center">Through The Lens</h1>
   <!-- this is the bootstrap I'd like my login features to look like. -->
 
   <p id="alert"><%= alert %></p>
 
+  <div id="loginform">
   <%= form_tag sessions_path, {class: "form-inline"} do %>
     <div class="form-group">
       <%= text_field_tag :email, nil, {class: "form-control", placeholder: "Email"} %>
@@ -13,8 +15,8 @@
     </div>
     <%= submit_tag "Submit", {class: "btn btn-default"}%>
   <% end %>
-  <br><br>
-  <div class="row">
-    <img class="center-block" id="rootpage" src="http://static.flickr.com/8068/8267361454_42586793fb.jpg" alt="Root Lens">
   </div>
+  <br><br>
+
+</div>
 </div>
