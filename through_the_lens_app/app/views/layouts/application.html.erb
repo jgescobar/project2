@@ -29,11 +29,15 @@
       </div>
 
         <% if current_user %>
-          <%= link_to('Your Profile', user_path(current_user), class: "btn btn-default navbar-btn", type: "button") if params[:controller] != "users" %>
-          <%= link_to 'Log Out', session_path(' '), class: "btn btn-default navbar-btn", type: "button", method: :delete %>
+          <%= link_to "Art", shares_path(category: "Art"), class: "btn btn-default navbar-btn", class: "btn btn-danger", type: "button" %>
+          <%= link_to "Music", shares_path(category: "Music"), class: "btn btn-default navbar-btn", class: "btn btn-success" %>
+          <%= link_to "Coffeeshops", shares_path(category: "Coffeeshops"), class: "btn btn-default navbar-btn", class: "btn btn-info" %>
+          <%= link_to "Tech", shares_path(category: "Tech"), class: "btn btn-default navbar-btn", class: "btn btn-warning" %>
+          <%= link_to('Your Profile', user_path(current_user), class: "btn btn-default navbar-btn", class: "btn btn-success", type: "button") if params[:controller] != "users" %>
+          <%= link_to 'Log Out', session_path(' '), class: "btn btn-default navbar-btn", class: "btn btn-warning", type: "button", method: :delete %>
         <% else %>
-          <%= link_to "Log In", new_session_path, class: "btn btn-default navbar-btn", type: "button" %>
-          <%= link_to "Join the Gang", new_user_path, class: "btn btn-default navbar-btn", type: "button" %>
+          <%= link_to "Sign In", new_session_path, class: "btn btn-default navbar-btn", class: "btn btn-success", type: "button" %>
+          <%= link_to "Join the Gang", new_user_path, class: "btn btn-default navbar-btn", class: "btn btn-warning", type: "button" %>
         <% end %>
       </div>
     </div>
