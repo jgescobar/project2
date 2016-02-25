@@ -5,14 +5,14 @@ Share.create(
   category:    "Art",
   link:        "https://artfiles.alphacoders.com/709/7091.jpg",
   title:       "Lavendar Field",
-  description: "a photography of Lavendar",
+  description: "a photograph of Lavender",
   artist:      "unknown",
   user_id:     4
 )
 
 Share.create(
   category:    "Music",
-  link:        "https://youtu.be/rOoCixFA8OI",
+  link:        "https://www.youtube.com/embed/9wCJPm19XYQ",
   title:       "Reckoner",
   description: "released 10/10/07",
   artist:      "Radiohead",
@@ -23,7 +23,7 @@ Share.create(
 
 Share.create(
   category:    "Coffeeshops",
-  link:        "http://www.bricksandscones.com/",
+  link:        "http://bricksandscones.com/images/center_img.png",
   title:       "Bricks and Scones",
   description: "Harry Potter",
   address:     "Larchmont",
@@ -32,7 +32,7 @@ Share.create(
 
 Share.create(
   category:    "Tech",
-  link:        "http://www.digitaltrends.com/cool-tech/3d-printed-robotic-lawn-mower/",
+  link:        "http://icdn2.digitaltrends.com/image/ardumower1-970x647-c.jpg",
   title:       "Ardumower",
   description: "This gadget mows the lawn for you.",
   user_id:     4

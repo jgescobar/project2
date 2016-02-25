@@ -3,12 +3,17 @@
 <% @shares.each do |share| %>
   <h3><%= share.title %></h3>
   <h3><%= share.artist %></h3>
-  <img src= <%= share.link %> alt="a pretty thing belongs here">
+  <% if share.link.include? "youtube" %>
+    <iframe src="<%= share.link %>"></iframe>
+  <% else %>
+    <img src="<%= share.link %>" alt="a pretty thing belongs here">
+  <% end %>
   <h2><%= share.description %></h2>
   <h2><%= share.length %></h2>
   <h2><%= share.album %></h2>
   <h2><%= share.address %></h2>
   <h2><%= share.user_id %></h2>
 <% end %>
+
 
 

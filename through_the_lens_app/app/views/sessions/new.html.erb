@@ -1,33 +1,20 @@
+<div class="col-sm-6 col-sm-offset-1">
+  <h1>Through The Lens</h1>
+  <!-- this is the bootstrap I'd like my login features to look like. -->
 
-<h1>Through The Lens</h1>
-<!-- this is the bootstrap I'd like my login features to look like. -->
-<form class="form-inline">
-  <div class="form-group">
-    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label class="sr-only" for="exampleInputPassword3">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default">Sign in</button>
-</form>
+  <p id="alert"><%= alert %></p>
 
-<p id="alert"><%= alert %></p>
-
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
+  <%= form_tag sessions_path, {class: "form-inline"} do %>
+    <div class="form-group">
+      <%= text_field_tag :email, nil, {class: "form-control", placeholder: "Email"} %>
+    </div>
+    <div class="form-group">
+      <%= password_field_tag :password, nil, {class: "form-control", placeholder: "Password"} %>
+    </div>
+    <%= submit_tag "Sign In", {class: "btn btn-default"}%>
+  <% end %>
+  <br><br>
+  <div class="row">
+    <img id="rootpage" src="http://static.flickr.com/8068/8267361454_42586793fb.jpg" alt="Root Lens">
   </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
-  <%= link_to "Join the Gang", new_user_path %>
-<% end %>
-<p>
-<img id="rootpage" src="http://static.flickr.com/8068/8267361454_42586793fb.jpg" alt="Root Lens">
-</p>
-
+</div>

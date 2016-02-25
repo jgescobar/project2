@@ -1,0 +1,16 @@
+<h1>New Share</h1>
+
+<div class="col-sm-6 col-sm-offset-1">
+  <%= form_for @share do |f| %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, {class: "form-control"} %>
+    </div>
+    <div class="form-group">
+      <%= f.label :link %>
+      <%= f.text_field :link, {class: "form-control"}  %>
+    </div>
+    <%= f.hidden_field :category, value: @share.category %>
+    <%= f.submit "Create Share", {class: "btn btn-success"} %>
+  <% end %>
+</div>

@@ -1,6 +1,7 @@
-<h1>To Join the Gang, Simply Fill out your ...</h1>
 
-<%= form_for @user do |f| %>
+<div class="col-sm-6 col-sm-offset-1">
+<h1>To Join the Gang, Simply Fill out your ...</h1>
+<%= bootstrap_form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div class="error_messages">
       <h2>Form is invalid</h2>
@@ -12,27 +13,23 @@
       </div>
     <% end %>
     <div class="field">
-      <%= f.label :username %>
       <%= f.text_field :username %>
     </div>
     <div class="field">
-      <%= f.label :email %>
       <%= f.text_field :email %>
     </div>
     <div class="field">
-      <%= f.label :password %>
       <%= f.text_field :password %>
     </div>
     <div class="field">
-      <%= f.label :location %>
       <%= f.text_field :location %>
     </div>
     <div class="field">
-      <%= f.label :img_url %>
-      <%= f.text_field :img %>
+        <%= f.text_field :img %>
     </div>
     <div class="actions"><%= f.submit %></div>
   <% end %>
+  </div>
 
 
 
