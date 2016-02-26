@@ -25,7 +25,7 @@
     <h2><%= share.album %></h2>
     <h2><%= share.address %></h2>
     <% if share.user == current_user %>
-      <h4><%= link_to "delete", share_path(share), method: :delete %> |
+  <h4><%= link_to "delete", share_path(share), method: :delete %> |
       <%= link_to "edit", edit_share_path(share) + "?category=" + params[:category], method: :get %></h4>
     <% end %>
     <% if share.user.img %>
