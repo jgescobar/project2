@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   get '/login', to: 'sessions#new'
 
-  resources :shares, only: [:index, :new, :create]
+  resources :shares, only: [:index, :new, :create, :show, :destroy]
 
 end
 

@@ -1,4 +1,7 @@
-<h1>New Share</h1>
+<div class="container">
+  <h1>New Share</h1>
+
+  <p><%= alert %></p>
 
 <div class="col-sm-6 col-sm-offset-1">
   <%= form_for @share do |f| %>
@@ -19,21 +22,15 @@
       <%= f.text_field :description, {class: "form-control"}  %>
     </div>
     <div class="form-group">
-      <%= f.label :length %>
-      <%= f.text_field :length, {class: "form-control"}  %>
-    </div>
-    <div class="form-group">
       <%= f.label :address %>
       <%= f.text_field :address, {class: "form-control"}  %>
     </div>
-    <%= f.hidden_field :category, value: @share.category %>
+    <div class="form-group">
+      <%= f.label :category %>
+      <%= f.collection_select :category, Share.select('distinct category'), :category, :category, {class: "form-control"}  %>
+    </div>
+    <!-- <%= f.hidden_field :category, value: @share.category %> -->
     <%= f.submit "Create Share", {class: "btn btn-success"} %>
   <% end %>
 </div>
-
-<select name="Category" multiple>
-  <option value="Art">Art</option>
-  <option value="Music">Music</option>
-  <option value="CoffeShop">Coffee Shop</option>
-  <option value="Tech">Tech</option>
-</select>
+</div>

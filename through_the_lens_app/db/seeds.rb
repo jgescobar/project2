@@ -1,13 +1,21 @@
 Share.destroy_all
 User.destroy_all
 
+u = User.create(
+  username:   "onbeing",
+  email:      "jas@example.com",
+  password:   "abc123",
+  img:        "../app/assets/images/default-profile-image.png",
+  location:   "Los Angeles"
+  )
+
 Share.create(
   category:    "Art",
   link:        "https://artfiles.alphacoders.com/709/7091.jpg",
   title:       "Lavendar Field",
   description: "a photograph of Lavender",
   artist:      "unknown",
-  user_id:     4
+  user:         u
 )
 
 Share.create(
@@ -18,7 +26,7 @@ Share.create(
   artist:      "Radiohead",
   length:      "4:50",
   album:       "In Rainbows",
-  user_id:     4
+  user:         u
 )
 
 Share.create(
@@ -27,7 +35,7 @@ Share.create(
   title:       "Bricks and Scones",
   description: "Harry Potter",
   address:     "Larchmont",
-  user_id:     4
+  user:         u
 )
 
 Share.create(
@@ -35,13 +43,7 @@ Share.create(
   link:        "http://icdn2.digitaltrends.com/image/ardumower1-970x647-c.jpg",
   title:       "Ardumower",
   description: "This gadget mows the lawn for you.",
-  user_id:     4
+  user:         u
 )
 
-User.create(
-  username:   "onbeing",
-  email:      "jas@example.com",
-  password:   "abc123",
-  img:        "../app/assets/images/default-profile-image.png",
-  location:   "Los Angeles"
-  )
+
