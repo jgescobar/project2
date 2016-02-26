@@ -29,8 +29,8 @@
           <%= link_to "Music", shares_path(category: "Music"), class: "btn btn-default navbar-btn", class: "btn btn-success" %>
           <%= link_to "Coffeeshops", shares_path(category: "Coffeeshops"), class: "btn btn-default navbar-btn", class: "btn btn-info" %>
           <%= link_to "Tech", shares_path(category: "Tech"), class: "btn btn-default navbar-btn", class: "btn btn-warning" %>
-          <%= link_to('Your Profile', user_path(current_user), class: "btn btn-default navbar-btn", class: "btn btn-success", type: "button") if params[:controller] != "users" %>
-          <%= link_to 'Log Out', session_path(' '), class: "btn btn-default navbar-btn", class: "btn btn-warning", type: "button", method: :delete %>
+          <%= link_to('Your Profile', user_path(current_user), class: "btn btn-default navbar-btn", class: "btn btn-secondary", type: "button") if params[:controller] != "users" %>
+          <%= link_to 'Log Out', session_path(' '), class: "btn btn-default navbar-btn", class: "btn btn-secondary", type: "button", method: :delete %>
         <% else %>
           <%= link_to "Sign In", new_session_path, class: "btn btn-default navbar-btn", class: "btn btn-success", type: "button" %>
 
