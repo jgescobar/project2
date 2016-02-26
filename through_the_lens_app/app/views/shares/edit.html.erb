@@ -1,1 +1,36 @@
+<div class="container">
+  <h1>Edit Content</h1>
 
+  <p><%= alert %></p>
+
+<div class="col-sm-6 col-sm-offset-1">
+  <%= form_for @share do |f| %>
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, {class: "form-control"} %>
+    </div>
+    <div class="form-group">
+      <%= f.label :artist %>
+      <%= f.text_field :artist, {class: "form-control"}  %>
+    </div>
+    <div class="form-group">
+      <%= f.label :link %>
+      <%= f.text_field :link, {class: "form-control"}  %>
+    </div>
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, {class: "form-control"}  %>
+    </div>
+    <div class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address, {class: "form-control"}  %>
+    </div>
+    <div class="form-group">
+      <%= f.label :category %>
+      <%= f.collection_select :category, Share.select('distinct category'), :category, :category, {class: "form-control"}  %>
+    </div>
+    <!-- <%= f.hidden_field :category, value: @share.category %> -->
+    <%= f.submit "Edit Share", {class: "btn btn-success"} %>
+  <% end %>
+</div>
+</div>

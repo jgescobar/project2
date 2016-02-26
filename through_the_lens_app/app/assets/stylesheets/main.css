@@ -1,3 +1,4 @@
+
 #lensimage {
   height: 500px;
   width: 700px;
@@ -8,5 +9,8 @@
   height: 700px;
   width: 700px;
   text-align: center;
-  /*background-image: url("http://static.flickr.com/8068/8267361454_42586793fb.jpg") no-repeat;*/
+}
+
+.row-spacing {
+  margin-bottom: 40px;
 }

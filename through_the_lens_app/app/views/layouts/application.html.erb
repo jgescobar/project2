@@ -13,22 +13,16 @@
 
 <nav class="navbar navbar-inverse">
   <div class="container">
-    <div class="container-fluid">
-      <div class="navbar-header">
+      <div class="col-lg-6 col-xs-12">
         <%= link_to home_path, class: "navbar-brand" do %>
           Home
         <% end %>
-      <div class="navbar-header">
         <%= link_to about_path, class: "navbar-brand" do %>
           About
         <% end %>
-<button type="button" class="navbar-toggle collapsed navbar-right" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-</button>
       </div>
+
+      <div class="col-lg-6 col-xs-12 text-right" >
         <% if current_user %>
           <%= link_to "Art", shares_path(category: "Art"), class: "btn btn-default navbar-btn", class: "btn btn-danger", type: "button" %>
           <%= link_to "Music", shares_path(category: "Music"), class: "btn btn-default navbar-btn", class: "btn btn-success" %>
@@ -42,10 +36,8 @@
           <%= link_to "Join the Gang", new_user_path, class: "btn btn-default navbar-btn", class: "btn btn-warning", type: "button" %>
         <% end %>
       </div>
-    </div>
   </div>
 </nav>
-
 
 <%= yield %>
 

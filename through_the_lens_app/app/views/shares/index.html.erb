@@ -1,15 +1,20 @@
-<div class="col-sm-6 col-sm-offset-1">
-  <h1><%= params[:category] %></h1>
-  <%= link_to "CREATE", new_share_path + "?category=" + params[:category] %>
+<div class="container">
+  <div class="row" >
+    <div class="col-xs-6">
+      <h1><%= params[:category] %></h1>
+    </div>
+    <div class="col-xs-6 text-right" >
+      <%= link_to "CREATE", new_share_path + "?category=" + params[:category] %>
+    </div>
 </div>
 
 <% @shares.each do |share| %>
-<div class="row">
+<div class="row row-spacing">
   <div class="col-xs-6">
     <% if share.link.include? "youtube" %>
         <iframe class="" src="<%= share.link %>"></iframe>
       <% else %>
-        <img class="" src="<%= share.link %>" alt="a pretty thing belongs here">
+        <img class="img-responsive" src="<%= share.link %>" alt="a pretty thing belongs here">
       <% end %>
   </div>
   <div class="col-xs-6">
@@ -17,18 +22,20 @@
     <h3><%= share.artist %></h3>
     <% if share.user == current_user %>
       <%= link_to "delete", share_path(share), method: :delete %>
+      <%= link_to "edit", edit_share_path(share) + "?category=" + params[:category], method: :get %>
     <% end %>
     <h2><%= share.description %></h2>
     <h2><%= share.length %></h2>
     <h2><%= share.album %></h2>
     <h2><%= share.address %></h2>
     <% if share.user.img %>
-      <img src="<%= share.user.img %>" width="75">
+      <img src="<%= share.user.img %>" width="75px">
     <% end %>
     <h4><%= share.user.username %> <small>(<%= share.user.location %>)</small></h4>
   </div>
 </div>
 <% end %>
+</div>
 
 
 

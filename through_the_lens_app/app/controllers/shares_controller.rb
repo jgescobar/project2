@@ -14,6 +14,17 @@ class SharesController < ApplicationController
     @share.category = params[:category]
   end
 
+  def edit
+    @share = Share.find(params[:id])
+  end
+
+  def update
+    @share = Share.find(params[:id])
+    @share.category = params[:category]
+    @share.update(share_params)
+    redirect_to '/shares?category=' + @share.category
+  end
+
   def create
     @share = Share.new(share_params)
     @share.user = current_user
