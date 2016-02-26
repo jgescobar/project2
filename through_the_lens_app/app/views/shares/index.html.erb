@@ -19,7 +19,7 @@
   </div>
   <div class="col-xs-6">
     <h3><%= share.title %></h3>
-    <h3><%= share.artist %></h3>
+    <h2><%= share.artist %></h3>
     <% if share.user == current_user %>
       <%= link_to "delete", share_path(share), method: :delete %>
       <%= link_to "edit", edit_share_path(share) + "?category=" + params[:category], method: :get %>
