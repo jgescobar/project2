@@ -13,14 +13,12 @@ My app through the lens will allow users to upload any type of art they find ins
 	
 	1) Ruby on Rails
 	2) CSS Bootstrap
-	3) JavaScript
-	4) HTML 
-	5) Git 
-	6) GitHub
-	7) Heroku
-	8) Trello 
+	3) HTML
+	4) Git
+	5) GitHub
+	6) Heroku
+	7) Trello
 	
-
 
 **AAU:**
 
@@ -32,12 +30,18 @@ My app through the lens will allow users to upload any type of art they find ins
 
 [X] I want to see who the artist is. 
 
-[X] I want to flag images if in poor taste. 
-
 [X] I want to protect art from being added, edited, or removed by users who do not have an account with the app. 
-
-[X] I want to search art by the artist / mood / tags /  title. 
 
 **Check out my Trello!!**   
     
 [Click here for Wireframes and User Stories ](https://trello.com/b/X6sjAe5G/ruby-rails-project)
+
+**Things that I hope to fix in the future**
+
+[] I'd like to be able to delete posts I do not like as the administrator without having to delete through the database. 
+
+[] I'd like to make the music videos exapand when a user clicks on the music video. 
+
+[] I'd like to allow people who are not signed up to see other user's posts. They will not be able to posts content without signing up however. 
+
+[] I'd like to add tags to allow for searching. 
